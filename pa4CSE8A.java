@@ -1,62 +1,35 @@
 import java.util.Scanner;
 
 public class pa4CSE8A {
-
 	public static void main(String[] args) {
     	
-		boolean[] answerTrueOrFlase = trueorFalse();
-	    boolean[] answerMultipleChoice = multipleChoice();	
+		boolean[] answer0 = TrueorFalse();
+	    boolean[] answer = multipleChoice();	
 		
-	    boolean[] finalAnswer = new boolean[10];	
-		
-		for(int i = 0; i < answerTrueOrFlase.length; i++) {
-			finalAnswer[i] = answerTrueOrFlase[i];
-		   }
-		  
-		for (int j = 0; j < answerMultipleChoice.length; j++) {
-		    finalAnswer[j+5] = answerMultipleChoice[j];
-           }
-		
-		int correctCount = 0;
-
-		for (int k = 0; k < finalAnswer.length; k++)	{
+		for (int i = 0; i < answer.length; i++) {
 			
-			if (finalAnswer[k] == true) {
-				correctCount++;
-				int m = k + 1;
-				System.out.println("You got question number " + m +" correct!" );
-			}
-			else {
-				int n = k + 1;
-			    System.out.println("You got question number " + n +" wrong!" );
-			}
-		   }
-		if (correctCount >= 6) {
-		    System.out.println("You score " + correctCount +"/10. Congratulations! You know much about Shakespear!");
-		   }
-		else {
-		    System.out.println("You score " + correctCount +"/10. You need to learn more about Shakespear!");
-		   }
+		System.out.println(answer0[i]);
+	    System.out.println(answer[i]);
+	      }
+		
 		}
-
-      
-		public static boolean[] trueorFalse() {
+		public static boolean[] TrueorFalse() {
 			
-			boolean[] torfAnswers= new boolean[5];
+			boolean[] TorFAnswers= new boolean[5];
 			
 			System.out.println("\"green-eyed monster\" means jealousy.");
 			
 			System.out.println("Enter your answer: True/False");
-			Scanner torfAnswer = new Scanner(System.in);
-			boolean answerQ1 = torfAnswer.nextBoolean();
+			Scanner answer0 = new Scanner(System.in);
+			String answerQ1 = answer0.next();
 			
-			if(answerQ1 == true) {
-				System.out.println(torfAnswers[0] = true);
+			if(answerQ1.equals ("True")) {
+				System.out.println(TorFAnswers[0] = true);
 				System.out.println("You are right!");
 				}
 			
-			else if(answerQ1 == false) {
-				System.out.println(torfAnswers[0] = false);
+			else if(answerQ1.equals("False")) {
+				System.out.println(TorFAnswers[0] = false);
 				System.out.println("You are wrong!");
 			}
 			else  {
@@ -67,15 +40,15 @@ public class pa4CSE8A {
 			System.out.println("Polonius is Ophelia's father.");
 			
 			System.out.println("Enter your answer: True/False");
-			boolean answerQ2 = torfAnswer.nextBoolean();
+			String answerQ2 = answer0.next();
 			
-			if(answerQ2 == true) {
-				System.out.println(torfAnswers[1] = true);
+			if(answerQ2.equals ("True")) {
+				System.out.println(TorFAnswers[1] = true);
 				System.out.println("You are right!");
 				}
 			
-			else if(answerQ2 == false) {
-				System.out.println(torfAnswers[1] = false);
+			else if(answerQ2.equals("False")) {
+				System.out.println(TorFAnswers[1] = false);
 				System.out.println("You are wrong!");
 			}
 			else  {
@@ -86,15 +59,15 @@ public class pa4CSE8A {
 			System.out.println("Elseneur is in Denmark.");
 			
 			System.out.println("Enter your answer: True/False");
-			boolean answerQ3 = torfAnswer.nextBoolean();
+			String answerQ3 = answer0.next();
 			
-			if(answerQ3 == false) {
-				System.out.println(torfAnswers[2] = true);
+			if(answerQ3.equals ("False")) {
+				System.out.println(TorFAnswers[2] = true);
 				System.out.println("You are right! Elseneur is in Scotland.");
 				}
 			
-			else if(answerQ3 == true) {
-				System.out.println(torfAnswers[2] = false);
+			else if(answerQ3.equals("True")) {
+				System.out.println(TorFAnswers[2] = false);
 				System.out.println("You are wrong! Elseneru is in Scotland.");
 			}
 			else  {
@@ -105,15 +78,15 @@ public class pa4CSE8A {
 			System.out.println("The Globe was re-built by the Virgin Queen.");
 			
 			System.out.println("Enter your answer: True/False");
-			boolean answerQ4 = torfAnswer.nextBoolean();
+			String answerQ4 = answer0.next();
 			
-			if(answerQ4 == false) {
-				System.out.println(torfAnswers[3] = true);
+			if(answerQ4.equals ("False")) {
+				System.out.println(TorFAnswers[3] = true);
 				System.out.println("You are right! The Globe was rebuilt by an American actor.");
 				}
 			
-			else if(answerQ4 == true) {
-				System.out.println(torfAnswers[3] = false);
+			else if(answerQ4.equals("True")) {
+				System.out.println(TorFAnswers[3] = false);
 				System.out.println("You are wrong! The Globe was rebuilt by an American actor.");
 			}
 			else  {
@@ -124,22 +97,22 @@ public class pa4CSE8A {
 			System.out.println("Benvolio is Romeo's dynamic friend.");
 			
 			System.out.println("Enter your answer: True/False");
-			boolean answerQ5 = torfAnswer.nextBoolean();
+			String answerQ5 = answer0.next();
 			
-			if(answerQ5 == false) {
-				System.out.println(torfAnswers[4] = true);
+			if(answerQ5.equals ("False")) {
+				System.out.println(TorFAnswers[4] = true);
 				System.out.println("You are right! The Globe was rebuilt by an American actor.");
 				}
 			
-			else if(answerQ5 == true) {
-				System.out.println(torfAnswers[4] = false);
+			else if(answerQ5.equals("True")) {
+				System.out.println(TorFAnswers[4] = false);
 				System.out.println("You are wrong! The Globe was rebuilt by an American actor.");
 			}
 			else  {
 		 		System.out.println("Your answer is invalid!");
-		 	}  
+		 	} 
 			
-			return torfAnswers;
+			return TorFAnswers;
 		}
 
 	    public static boolean[] multipleChoice() {
