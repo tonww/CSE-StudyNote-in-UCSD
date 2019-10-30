@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
 public class pa4CSE8A {
-	public static void main(String[] args) {
+public static void main(String[] args) {
     	
-		boolean[] answer0 = TrueorFalse();
-	    boolean[] answer = multipleChoice();	
+		boolean[] answerTrueOrFlase = questionTrueorFalse();
+	    boolean[] answerMultipleChoice = multipleChoice();	
 		
 	    boolean[] finalAnswer = new boolean[10];	
 		
@@ -136,9 +136,9 @@ public class pa4CSE8A {
 			}
 			else  {
 		 		System.out.println("Your answer is invalid!");
-		 	} 
+		 	}  
 			
-			return TorFAnswers;
+			return torfAnswers;
 		}
 
 	    public static boolean[] multipleChoice() {
